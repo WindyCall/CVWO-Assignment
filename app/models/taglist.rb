@@ -1,0 +1,2 @@
+class Taglist < ApplicationRecord
+end
