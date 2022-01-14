@@ -42,7 +42,7 @@ class Sidebar extends React.Component {
                 className="btn btn-secondary btn"
                 disabled = {this.getDisabledvalue()}
             >
-                Delete this tag
+                Delete tag
             </button>
             <br /><br /><br />
             <h3>Add tag</h3>
