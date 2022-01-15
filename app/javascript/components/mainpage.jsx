@@ -49,7 +49,7 @@ class Mainpage extends React.Component {
                     && (word.attributes.tag === this.props.Filtertagselectednow || this.props.Filtertagselectednow === "")) {
                     return (
                         <Word
-                        key = {word.attributes.name + word.attributes.id}
+                        key = {word.id}
                         name = {word.attributes.name}
                         id = {word.id} 
                         onDelete = {this.props.onDelete}
