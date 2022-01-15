@@ -109,6 +109,10 @@ class App extends React.Component {
 }
 
   handleUpdate = (wordId, word, t) => {
+    if (this.state.words.filter(w => w.attributes.name === word && w.attributes.tag === t).length > 0) {
+      alert("The word with this tag has already existed\n\nplease update to another one");
+      return ;
+    }// to avoid duiplicate word
     if (word === "") {
         alert('Can not update an empty word');
         return ;
