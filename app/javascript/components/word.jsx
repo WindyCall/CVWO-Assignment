@@ -64,8 +64,8 @@ class Word extends React.Component {
                             },
                             content : {
                                 top: '100px',
-                                left: '100px',
-                                right: '100px',
+                                left: '300px',
+                                right: '300px',
                                 bottom: '100px',
                                 padding: '20px',
                                 borderRadius: '20px',
