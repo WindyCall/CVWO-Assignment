@@ -143,12 +143,18 @@ class App extends React.Component {
   // can not add the same tag(add a check algorithm to achieve this)
   // can not delete a tag that already has words in it
   handleAddtag = (tagname) => {
-    if (this.state.taglist.filter(t => t.attributes.tag === tagname).length > 0) {
-      alert("this tag has already existed\n\nplease add another one");
-      return ;
-    }
     if (tagname === "") {
       alert("can not add an empty tag");
+      return ;
+    }
+    let tagWithOutSpace = "";
+    for (let i = 0;i < tagname.length;i = i + 1) {
+      const x = tagname.charAt(i);
+      if (x === " ") break;
+      tagWithOutSpace = tagWithOutSpace + x;
+    }
+    if (this.state.taglist.filter(t => t.attributes.tag === tagWithOutSpace).length > 0) {
+      alert("this tag has already existed\n\nplease add another one");
       return ;
     }
     /*const taglist = [...this.state.taglist];
@@ -157,12 +163,6 @@ class App extends React.Component {
     taglist.push(t);
     this.setState({ taglist });
     alert("the tag " + tagname + " has been added successfully!\n\nyou can now seen it in taglist");*/
-    let tagWithOutSpace = "";
-    for (let i = 0;i < tagname.length;i = i + 1) {
-      const x = tagname.charAt(i);
-      if (x === " ") break;
-      tagWithOutSpace = tagWithOutSpace + x;
-    }
     const new_tag = {tag: tagWithOutSpace};
             fetch('/api/v1/taglists', {
                 method: 'post',
