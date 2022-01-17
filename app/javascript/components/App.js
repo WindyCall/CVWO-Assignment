@@ -157,8 +157,13 @@ class App extends React.Component {
     taglist.push(t);
     this.setState({ taglist });
     alert("the tag " + tagname + " has been added successfully!\n\nyou can now seen it in taglist");*/
-
-    const new_tag = {tag: tagname};
+    let tagWithOutSpace = "";
+    for (let i = 0;i < tagname.length;i = i + 1) {
+      const x = tagname.charAt(i);
+      if (x === " ") break;
+      tagWithOutSpace = tagWithOutSpace + x;
+    }
+    const new_tag = {tag: tagWithOutSpace};
             fetch('/api/v1/taglists', {
                 method: 'post',
                 body: JSON.stringify(new_tag),
