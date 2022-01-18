@@ -1,4 +1,6 @@
-This project is the Final-assignment for NUS Computing for Voluntary Welfare Organisations (CVWO) for 2021/2022
+This is the Final-assignment for CVWO on 2021/2022
+
+Note: My final-writeup is in the "Final Submission" folder
 
 Done by:
 
@@ -6,7 +8,4 @@ Name: XIAO YAN
 
 Matrix Number: A0245626B
 
-Note: My final-writeup is in the "Final Submission" folder
-
 Website: https://xiaoyan13.herokuapp.com/
-

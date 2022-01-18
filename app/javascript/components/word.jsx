@@ -38,7 +38,7 @@ class Word extends React.Component {
     render() { 
         return (
             <div className='custom-control bg-light'>
-                <h4 onClick={this.checkclick} className='m-2'>
+                <h4 className='m-2'>
                     {this.props.name}
                 </h4>
                 {this.getTagType()}
