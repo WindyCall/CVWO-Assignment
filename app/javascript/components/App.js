@@ -217,7 +217,6 @@ class App extends React.Component {
   }
 
   handleSearchword = (letters) => {
-    console.log(letters);
     this.setState({ letters });
   }
 
